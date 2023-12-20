@@ -30,7 +30,7 @@ VALUES
 
 # Find the top 3 highest ranking items in the electronics category
 # I started off by selecting what they want the output to be which is the item, the name, and the rankings from the superstore table.
-# By ordering the average ratings to be in a descending form I can now limit the amount to 3. This will give me the 3 highest ranking items in the electronics section.
+# By ordering the average ratings to be in a descending order I can now limit the amount to 3. This will give me the 3 highest ranking items in the electronics section.
 SELECT
     item_id,
     item_name,
