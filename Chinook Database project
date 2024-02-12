@@ -1,0 +1,11 @@
+#In this SQL I am answering random questions from a database Called 'chinook'
+#The questions are made by me as I explore the whole database
+
+#1-Display the customers who are from Brazil and live in the city of São Paulo
+SELECT * 
+FROM customers
+WHERE country='Brazil'
+AND City= 'São Paulo';
+
+#2- Display all the employees who were hired as Sales Support Agents after 2003.
+
