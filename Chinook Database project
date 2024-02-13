@@ -7,5 +7,25 @@ FROM customers
 WHERE country='Brazil'
 AND City= 'São Paulo';
 
-#2- Display all the employees who were hired as Sales Support Agents after 2003.
+#2- Display all the employees who were hired as Sales Support Agents in the year 2003 or after.
+SELECT EmployeeId, LastName, FirstName
+FROM chinook.employees
+WHERE HireDate>'2003-01-01 00:00:00';
+
+#3-How many Invoices were there in 2009?
+SELECT SUM(Total)
+FROM chinook.Invoices
+WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31';
+
+#4-Write a query that includes the purchased track name AND artist name with each invoice line ID
+SELECT ar.name as Artist, t.Name as Track, i.InvoiceLineId
+FROM chinook.Invoice_items i
+LEFT JOIN chinook.tracks t 
+ON i.TrackID=t.TrackID
+INNER JOIN chinook.albums a
+ON a.AlbumID=t.AlbumID
+LEFT JOIN chinook.artists ar
+ON ar.ArtistID=a.ArtistID;
+
+
 
